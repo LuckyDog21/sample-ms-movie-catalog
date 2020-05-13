@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<!--/*@thymesVar id="models" type="java.util.List<com.sample.common.Movie>"*/-->
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+</head>
+<body>
+<p th:each="model : ${models}" th:text="${model.name}">${models.name}</p>
+</body>
+</html>
