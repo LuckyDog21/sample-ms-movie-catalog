@@ -8,5 +8,5 @@ import org.springframework.stereotype.Component;
 @Component
 public class ApplicationProperties {
     @Getter
-    private final String list = "http://localhost:8082/api/v1/movies";
+    private final String list = "http://movie-info/api/v1/movies";
 }
