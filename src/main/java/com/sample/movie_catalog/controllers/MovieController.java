@@ -5,6 +5,7 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.sample.common.Movie;
 import com.sample.movie_catalog.ApplicationProperties;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Controller
+@RefreshScope
 @RequestMapping("movies")
 public class MovieController {
     public MovieController(ApplicationProperties props, WebClient.Builder webClient) {
